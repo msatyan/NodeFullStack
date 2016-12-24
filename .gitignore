@@ -1,0 +1,6 @@
+
+#vs Code IDE configuration files
+#.vscode
+
+**/*.map
+**/node_modules

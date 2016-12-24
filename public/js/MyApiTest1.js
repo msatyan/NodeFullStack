@@ -85,6 +85,32 @@ class MyApiTest1
 
         this.SimpleAjax(ajaxObj, DemoObj.DisplayJsonData, DemoObj.DisplayError);
     }
+
+    TryAnyAction()
+    {
+        var ajaxObj = {
+            url: "/product",
+            method: "POST",
+            dataType: "json",
+            data: undefined,
+        };
+
+        ajaxObj.url = $('#MyActionUri').val();
+
+        var elem = document.getElementById("Action1");
+        ajaxObj.method = elem.innerText;
+
+        if( ajaxObj.method == "POST")
+        {
+            var elem = document.getElementById("MyInputTextarea");
+            var x = JSON.parse(elem.value);
+
+            console.log( x );
+            ajaxObj.data = x;
+        }
+
+        this.SimpleAjax(ajaxObj, DemoObj.DisplayJsonData, DemoObj.DisplayError);
+    }    
 }
 
 const DemoObj = new MyApiTest1();

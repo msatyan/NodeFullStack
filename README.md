@@ -1,17 +1,20 @@
-# MyNodeRestAPI
+## MySimpleRest2
 Copyright (c) 2016 Sathyanesh Krishnan. All rights reserved.
-
 Licensed under the Apache License, Version 2.0
 
 
-## The Nodejs REST API 
-This is a very basic sample REST API created by using Nodejs. In this we used middleware concept for the routers. Purpose of this project is purely educational, and it demonstrates the following features.
+#### The Nodejs REST API 
+This is a very basic sample REST API created by using Nodejs. In this we used middleware concept for the routers. Purpose of this project is purely educational, n security aspect has considered with it.  This project demonstrates the following features.
+- Serving static page (node is not efficient for static page serving, so not recommended)
 - REST API based on node.js
-- Making AJAX request, such as GET, POST.
-- Send/Receive data to/from back-end using AJAX call. 
+- Making AJAX request, such as GET, POST 
+- Send/Receive data to/from back-end using AJAX call 
 - Examples of GET, POST, DELETE
 
-
+#### Feature usage
+- AJAX (public/js/MyApiTest1.js)
+- Static Page Serving (routes/index.js)
+- Basic in memory DB (db/InMemoryDb.js)
 
 
 

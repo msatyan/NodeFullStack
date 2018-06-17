@@ -13,7 +13,7 @@ This is a very basic sample REST API created by using Nodejs. In this we used mi
 npm start
 ```
 
-
+### API basic usage
 Then on the browser
 ```bash
 http://localhost:3000/

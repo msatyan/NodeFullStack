@@ -38,7 +38,7 @@ http://localhost:3000/order
 http://localhost:3000/product
 http://localhost:3000/order
 
-#
+# Static page serving
 http://localhost:3000/
 
 ```

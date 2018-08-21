@@ -23,7 +23,8 @@ This is a very basic sample REST API created by using Nodejs. In this we used mi
 # Clone the project
 git clone https://github.com/msatyan/MySimpleRest2.git
 
-npm install MySimpleRest2
+cd MySimpleRest2
+npm install 
 ```
 
 #### Start the node API server

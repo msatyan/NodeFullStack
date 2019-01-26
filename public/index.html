@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
@@ -8,7 +9,7 @@
     <meta name="author" content="Sathyanesh Krishnan">
 
     <title>Simple API Test</title>
-    <link rel="stylesheet" type="text/css" href="css/MyApiTest1.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="highlight/styles/default.css">
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
 
@@ -21,7 +22,7 @@
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script type="text/javascript" src="lib/jquery/jquery.js"></script>
     <script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/MyApiTest1.js"></script>
+    <script type="text/javascript" src="js/MyAjaxLib.js"></script>
 
 
     <div class="container-fluid">
@@ -50,8 +51,9 @@
                 <h5 class="text-primary">Insert</h5>
                 <div class="input-group">
                     <div class="input-group-btn">
-                        <button type="button" id="Action1"  class="btn btn-primary"
-                        onclick="DemoObj.TryAnyAction();">POST</button>
+                        <button type="button" id="Action1" class="btn btn-primary" onclick="DemoObj.TryAnyAction();">
+                            POST
+                        </button>
 
                         <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,21 +61,23 @@
                         </button>
                         <div class="dropdown-menu MyActionSelectList">
 
-                        <li><a class="dropdown-item" href="#">POST</a></li>
-                        <li><a class="dropdown-item" href="#">PUT</a></li>
-                        <li><a class="dropdown-item" href="#">PATCH</a></li>
-                        <li><a class="dropdown-item" href="#">DELETE</a></li>
+                            <li><a class="dropdown-item" href="#">POST</a></li>
+                            <!--
+                            <li><a class="dropdown-item" href="#">PUT</a></li>
+                            <li><a class="dropdown-item" href="#">PATCH</a></li>
+                            -->
+                            <li><a class="dropdown-item" href="#">DELETE</a></li>
 
                         </div>
                     </div>
-                    <input type="text"  id="MyActionUri" class="form-control"
-                    aria-label="Text input with segmented button dropdown"
-                    placeholder="Enter the URI for the selected action" value="/product">
+                    <input type="text" id="MyActionUri" class="form-control" aria-label="Text input with segmented button dropdown"
+                        placeholder="Enter the URI for the selected action" value="/product">
                 </div>
 
                 <div>
-                    <textarea placeholder="Enter your JSON input here..."
-                    class="form-control" id="MyInputTextarea" rows="10" >
+                    <textarea placeholder="Enter your JSON input here..." class="form-control" id="MyInputTextarea"
+                        rows="10">
+
                     </textarea>
                 </div>
                 </br>
@@ -95,6 +99,5 @@
     </div>
 
 </body>
+
 </html>
-
-

@@ -1,0 +1,9 @@
+
+{
+    "AllConns": {
+        "Conn1": {
+            "ConnStr": "SERVER=ids0;DATABASE=db1;HOST=127.0.0.1;SERVICE=9088;UID=informix;PWD=xxxx;",
+            "Description" : "Testing Hello World"
+        }
+    }
+}

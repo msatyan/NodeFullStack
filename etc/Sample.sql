@@ -3,17 +3,23 @@
   DROP TABLE customers;
 
 CREATE TABLE products (
- idproduct  int PRIMARY KEY,
+ id  int PRIMARY KEY,
  name char(20),
- description char(30),
- price int );
+ strjs LVARCHAR );
 
 CREATE TABLE customers (
- idcustomer  int PRIMARY KEY,
+ id  int PRIMARY KEY,
  name char(20),
- address char(30) );
- 
+ strjs LVARCHAR );
+
 CREATE TABLE orders (
- idcustomer int REFERENCES customers(idcustomer),
- idproduct  int REFERENCES products(idproduct),
- qty int );
+ idc int REFERENCES customers(id),
+ idp  int REFERENCES products(id),
+ qty int,
+ strjs LVARCHAR );
+
+
+
+INSERT INTO products VALUES ( 1, 'CD',  '{ "price": 101, "info": "some other info" }' );
+INSERT INTO products VALUES ( 2, 'DVD', '{ "price": 102, "info": "some other info" }' );
+INSERT INTO products VALUES ( 3, 'BD',  '{ "price": 103, "info": "some other info" }' );

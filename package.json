@@ -1,13 +1,24 @@
 {
-  "name": "MySimpleRest2",
+  "name": "NodeFullStack",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./app.js"
   },
+  "keywords": [
+    "Informix",
+    "Node",
+    "FullStack",
+    "REST",
+    "IoT"
+  ],
+  "author": "Sathyanesh Krishnan",
+  "license": "Apache License",
   "dependencies": {
-    "body-parser": "~1.15.2",
-    "express": "~4.14.0",
-    "morgan": "~1.7.0"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "ifxnjs": "^8.0.1",
+    "morgan": "^1.9.1",
+    "q": "^1.5.1"
   }
 }

@@ -3,8 +3,8 @@ var express = require('express');
 var router = express.Router();
 
 // GET: Sent some basic info for usage
-router.get('/', 
-function(req, res, next) 
+router.get('/',
+function(req, res, next)
 {
   var fname = __dirname + '/../public/index.html';
 
@@ -14,10 +14,9 @@ function(req, res, next)
         //send can only be called once, write can be called many times,
         // in short res.send(msg) == res.write(msg);res.end();
         res.writeHeader(200, {"Content-Type": "text/html"});
-        res.write(data);  
+        res.write(data);
         res.end();
-    }); 
- 
+    });
 });
 
 module.exports = router;

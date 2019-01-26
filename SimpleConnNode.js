@@ -1,4 +1,9 @@
+// Copyright (c) 2018 Sathyanesh Krishnan. All rights reserved.
+// Licensed under the Apache License, Version 2.0
+
 var dbobj = require('ifxnjs');
+var fs = require('fs');
+
 
 function DirExec( conn, ErrIgn, sql )
 {
@@ -83,15 +88,18 @@ function ifxnjs_OpenSync(ConStr)
 
 function main_func()
 {
-  //  Make sure the port is IDS SQLI port.
-  // var ConnectionString = "SERVER=ids0;DATABASE=db1;HOST=127.0.0.1;SERVICE=9088;UID=informix;PWD=xxxx;";
-  var ConnectionString = "SERVER=ids0;DATABASE=db1;HOST=192.168.56.5;SERVICE=5550;UID=informix;PWD=xxxx;";
+  // See the SampleConfig.json to create MyConfig.json
+  //  Make sure the port used in connection is IDS SQLI port.
+  var MyConfig = JSON.parse(fs.readFileSync('MyConfig.json', 'utf8')); // do Synchronously read only
+
+  var ConnStr = MyConfig.AllConns.Conn1.ConnStr;
+  // ConnStr = "SERVER=ids0;DATABASE=db1;HOST=127.0.0.1;SERVICE=9088;UID=informix;PWD=xxxxx;";
 
   //Synchronous Execution
-  ifxnjs_OpenSync(ConnectionString);
+  ifxnjs_OpenSync(ConnStr);
 
   //Asynchronous Execution
-  ifxnjs_Open(ConnectionString);
+  ifxnjs_Open(ConnStr);
 }
 
 main_func();

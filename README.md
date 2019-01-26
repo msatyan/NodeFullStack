@@ -62,9 +62,9 @@ npm start
 # http://localhost:3000/
 
 # REST API implementations
-# http://localhost:3000/order
-# http://localhost:3000/product
-# http://localhost:3000/order
+# http://localhost:3000/v1/order
+# http://localhost:3000/v1/product
+# http://localhost:3000/v1/order
 ```
 
 
@@ -75,13 +75,13 @@ You may use Visual Studio Code with REST Client plugin for convenient way of inv
 
 ```bash
 # Get: SELECT all records from product table
-curl    -X GET http://localhost:3000/product
+curl    -X GET http://localhost:3000/v1/product
 
 # Get: SELECT a specific record where product id=3
-curl    -X GET  http://localhost:3000/product/3
+curl    -X GET  http://localhost:3000/v1/product/3
 
 # Delete a record where the product id=2
-curl    -X DELETE  http://localhost:3000/product/2
+curl    -X DELETE  http://localhost:3000/v1/product/2
 
 
 # POST: Inset a record to the database with an id=102
@@ -89,7 +89,7 @@ curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" -
   "id": 102,
   "name": "Test-2"
 }
-' "http://localhost:3000/product"
+' "http://localhost:3000/v1/product"
 ```
 
 

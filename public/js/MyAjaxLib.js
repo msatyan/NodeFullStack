@@ -75,7 +75,7 @@ class MyDemo1
     TrySimpleGet()
     {
         var ajaxObj = {
-            url: "/product",
+            url: "/v1/product",
             method: "GET",
             dataType: "json"
         };
@@ -88,7 +88,7 @@ class MyDemo1
     TryAnyAction()
     {
         var ajaxObj = {
-            url: "/product",
+            url: "/v1/product",
             method: "POST",
             dataType: "json",
             data: undefined,

@@ -17,9 +17,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', rt_index);
-app.use('/order', rt_order);
-app.use('/product', rt_product);
-app.use('/customer', rt_customer);
+app.use('/v1/order', rt_order);
+app.use('/v1/product', rt_product);
+app.use('/v1/customer', rt_customer);
 
 
 // catch 404 and forward to error handler
@@ -46,10 +46,15 @@ app.use(
 
 
 var port = process.env.PORT || 3000;
+console.log("Static Page:");
 console.log(`http://localhost:${port}/`);
-console.log(`http://localhost:${port}/order`);
-console.log(`http://localhost:${port}/product`);
-console.log(`http://localhost:${port}/order`);
+
+console.log();
+console.log("API Access:");
+console.log(`http://localhost:${port}/v1/order`);
+console.log(`http://localhost:${port}/v1/product`);
+console.log(`http://localhost:${port}/v1/order`);
+console.log();
 
 //module.exports = app;
 app.listen(port);

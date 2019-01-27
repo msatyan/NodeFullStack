@@ -11,6 +11,7 @@ MyConfig.json
 package-lock.json
 
 *.log
+tmp
 tmp.*
 0
 1

@@ -1,9 +1,14 @@
 var express = require('express');
 var app = express();
+//var url = require("url");
 
 var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+
+// const swaggerUi = require('swagger-ui-express');
+// const swaggerDocument = require('./apidocs/swagger.json');
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 var rt_index = require('./routes/index');
 var rt_order = require('./routes/order');
@@ -55,6 +60,9 @@ console.log(`http://localhost:${port}/v1/order`);
 console.log(`http://localhost:${port}/v1/product`);
 console.log(`http://localhost:${port}/v1/order`);
 console.log();
+
+// console.log(`http://localhost:${port}/api-docs`);
+// console.log();
 
 //module.exports = app;
 app.listen(port);

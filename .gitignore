@@ -17,3 +17,6 @@ tmp.*
 1
 0.*
 1.*
+
+# you may comment this if you are using it for production
+package-lock.json

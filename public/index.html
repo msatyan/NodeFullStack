@@ -21,8 +21,10 @@
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script type="text/javascript" src="lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="lib/popper/popper.js"></script>
     <script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="js/MyAjaxLib.js"></script>
+
 
 
     <div class="container-fluid">
@@ -41,7 +43,9 @@
                 <h5 class="text-success">Select</h5>
                 <div class="input-group">
                     <span class="input-group-btn">
-                        <button class="btn btn-success" type="button" onclick="DemoObj.TrySimpleGet();">Get</button>
+                        <button class="btn btn-success"
+                        data-toggle="tooltip" data-placement="top"  title="get all or specific record"
+                        type="button" onclick="DemoObj.TrySimpleGet();">Get</button>
                     </span>
                     <input type="text" id="MyGetUri" class="form-control" placeholder="Enter the URI for GET" value="/v1/product">
                 </div>
@@ -56,7 +60,7 @@
                             POST
                         </button>
 
-                        <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -92,6 +96,19 @@
         </div>
 
     </div>
+
+
+    <script>
+        // Initialize tooltip component
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        // Initialize popover component
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
 
 </body>
 

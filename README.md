@@ -17,7 +17,7 @@ This is a full stack web solution (with responsive web page) written in JavaScri
 - AJAX call (public/js/MyAjaxLib.js)
 - REST API service (routes/product.js)
 - Static Page Serving API (routes/index.js)
-- Basic in memory DB (db/InMemDbService.js)
+- Basic in memory DB (db/InMemDbProdService.js)
 - Informix Database Connectivity (db/IfxProductService.js)
 - Basic CURL command to test the REST API (Test/TestProd.http)
 
@@ -114,9 +114,9 @@ The service virtualization layer for database access makes it easy to switch ove
 - Edit **MyConfig.json** by providing the right connection information to the Informix database.
 - Modify RESTful service source code (This can be a single line change)  
 
-For Example for the **product service** to use Informix Database, modify the **product service** source code **[product.js](routes/product.js)** by import (require) IfxProductService and comment the InMemDbService import. Then the modified code may look like this
+For Example for the **product service** to use Informix Database, modify the **product service** source code **[product.js](routes/product.js)** by import (require) IfxProductService and comment the InMemDbProdService import. Then the modified code may look like this
 ```javascript
-// var dbs = require('../db/InMemDbService');
+// var dbs = require('../db/InMemDbProdService');
 var dbs = require('../db/IfxProductService');
 ```
 

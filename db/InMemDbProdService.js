@@ -1,6 +1,6 @@
 var myutil = require('../util/util1');
 
-class InMemDbService {
+class InMemDbProdService {
   // if you need block scope thn declare with 'let' or 'const' else 'var'
   constructor() {
     this.db = {
@@ -62,4 +62,4 @@ class InMemDbService {
   }
 }
 
-module.exports = new InMemDbService();
+module.exports = new InMemDbProdService();

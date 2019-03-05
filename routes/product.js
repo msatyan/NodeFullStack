@@ -38,14 +38,12 @@ var router = express.Router();
 
 
 //GET: Retrieves ALL resources.
-router.get('/',
-    function (req, res, next) {
+router.get('/', (req, res, next) => {
         res.json(dbs.GetReq());
     });
 
 // GET: Retrieves a resource.
-router.get('/:id',
-    function (req, res, next) {
+router.get('/:id', (req, res, next) => {
         var x = dbs.GetIdReq(req.params.id);
         if (x == undefined) {
             //res.status(404).end();
@@ -57,8 +55,7 @@ router.get('/:id',
     });
 
 // POST:  Creates a new resource.
-router.post('/',
-    function (req, res, next) {
+router.post('/', (req, res, next) => {
         // POST	Create
         // Entire Collection:
         // 201 (Created), 'Location' header with link to /product/{id} containing new ID.
@@ -75,8 +72,7 @@ router.post('/',
         }
     });
 
-router.delete('/:id',
-    function (req, res, next) {
+router.delete('/:id', (req, res, next) => {
         // DELETE Delete
         // Entire Collection:
         // 404 (Not Found), unless you want to delete the whole collection—not often desirable.

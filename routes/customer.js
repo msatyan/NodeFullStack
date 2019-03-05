@@ -33,28 +33,20 @@ var router = express.Router();
 // Specific Item:
 // 200 (OK). 404 (Not Found), if ID not found or invalid.
 
-router.get('/',
-    function (req, res, next)
-    {
+router.get('/', (req, res, next) =>  {
         res.send('respond from customer get');
     });
 
-router.get('/:id',
-    function (req, res, next)
-    {
+router.get('/:id', (req, res, next) =>  {
         res.send(`respond from customer get with id=${req.params.id}`);
     });
 
-router.post('/',
-    function (req, res, next)
-    {
+router.post('/', (req, res, next) => {
         // save to the database
         res.send('respond from customer post');
     });
 
-router.delete('/:id',
-    function (req, res, next)
-    {
+router.delete('/:id', (req, res, next) => {
         // delete from the database
         res.send('respond from customer delete');
     });

@@ -15,31 +15,31 @@ var rt_order = require('./routes/order');
 var rt_product = require('./routes/product');
 var rt_customer = require('./routes/customer');
 
+
+// Wiring up middleware, this must be  before calling any routes
+// https://expressjs.com/en/guide/writing-middleware.html
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+// Defining foutes
 app.use('/', rt_index);
 app.use('/v1/order', rt_order);
 app.use('/v1/product', rt_product);
 app.use('/v1/customer', rt_customer);
 
 
+// Wiring up error handler middleware, this must be after the routes
 // catch 404 and forward to error handler
-app.use(
-  function (req, res, next)
-  {
+app.use(   (req, res, next) =>  {
       var err = new Error('Not Found');
       err.status = 404;
       next(err);
   });
 
 // error handler
-app.use(
-  function (err, req, res, next)
-  {
+app.use( (err, req, res, next) =>  {
       // set locals, only providing error in development
       res.locals.message = err.message;
       res.locals.error = req.app.get('env') === 'development' ? err : {};

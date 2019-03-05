@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Defining foutes
+// Defining routes
 app.use('/', rt_index);
 app.use('/v1/order', rt_order);
 app.use('/v1/product', rt_product);

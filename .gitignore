@@ -1,6 +1,7 @@
 
 #vs Code IDE configuration files
-#.vscode
+.vscode
+.history
 
 # Informix Connection Information
 ConnInfo.json

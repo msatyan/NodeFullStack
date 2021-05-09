@@ -1,7 +1,7 @@
 // Copyright (c) 2018 Sathyanesh Krishnan. All rights reserved.
 // Licensed under the Apache License, Version 2.0
 
-var dbobj = require('ifxnjs');
+var dbobj = require('informixdb');
 var fs = require('fs');
 
 
@@ -52,16 +52,16 @@ var MyAsynchronousTask = function (err, conn)
   conn.close();
 }
 
-function ifxnjs_Open(ConStr)
+function informixdb_Open(ConStr)
 {
   console.log(" --- MyAsynchronousTask Starting....." );
   dbobj.open( ConStr, MyAsynchronousTask );
   console.log(" --- Check the sequence printed!" );
 }
 
-function ifxnjs_OpenSync(ConStr)
+function informixdb_OpenSync(ConStr)
 {
-  console.log(" --- Executing ifxnjs.openSync() ...." );
+  console.log(" --- Executing informixdb.openSync() ...." );
   var conn;
   try
   {
@@ -83,7 +83,7 @@ function ifxnjs_OpenSync(ConStr)
   {
     console.log(e);
   }
-  console.log(" --- End ifxnjs.openSync()" );
+  console.log(" --- End informixdb.openSync()" );
 }
 
 function main_func()
@@ -96,10 +96,10 @@ function main_func()
   // ConnStr = "SERVER=ids0;DATABASE=db1;HOST=127.0.0.1;SERVICE=9088;UID=informix;PWD=xxxxx;";
 
   //Synchronous Execution
-  ifxnjs_OpenSync(ConnStr);
+  informixdb_OpenSync(ConnStr);
 
   //Asynchronous Execution
-  ifxnjs_Open(ConnStr);
+  informixdb_Open(ConnStr);
 }
 
 main_func();

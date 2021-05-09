@@ -1,4 +1,4 @@
-var dbobj = require('ifxnjs');
+var dbobj = require('informixdb');
 var fs = require('fs');
 
 class IfxProductService {

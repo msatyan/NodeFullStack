@@ -8,7 +8,7 @@ pipeline {
                 script {
 
                     sh """
-                        docker build -t https://099242274141.dkr.ecr.eu-west-1.amazonaws.com/backend:${env.BUILD_ID} -f Dockerfile-backend .
+                        docker build -t 099242274141.dkr.ecr.eu-west-1.amazonaws.com/backend:${env.BUILD_ID} -f Dockerfile-backend .
                         """
                 }
             }

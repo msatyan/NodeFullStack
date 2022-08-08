@@ -2,6 +2,7 @@ pipeline {
     agent {
         label 'mashebali'
     }
+stages {
     stage('Build and Push Docker Image...') {
         steps {
             script {
@@ -19,5 +20,5 @@ pipeline {
             sh 'docker rmi -f my-image:${env.BUILD_ID}'
             }
         } 
-    }
+    }}
 }

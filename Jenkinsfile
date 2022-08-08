@@ -11,9 +11,12 @@ pipeline {
                     def tag = "${env.BUILD_ID}"
                     def dockerfile = "Dockerfile-backend"
                     sh """
+                        aws ecr get-login-password --region eu-west-1 \
+                            | docker login --username AWS --password-stdin ${repository}
+
                        docker build -t ${repository}:${tag} -f ${dockerfile} .
                        docker push ${repository}:${tag}
-                        """
+                    """
                 }
             }
         } 

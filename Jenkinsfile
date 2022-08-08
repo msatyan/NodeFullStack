@@ -47,5 +47,18 @@ pipeline {
                 }
             } 
         }
+        stage('Deploy to kubernetes') {
+            agent {
+                label "mashebali"
+            }
+            steps {
+                script {
+                    sh """
+                        helm upgrade --install backend  --set image.tag=${env.BUILD_ID} charts/backend
+                        helm upgrade --install frontend --set image.tag=${env.BUILD_ID} charts/frontend
+                        """
+                }
+
+            }
+        }
     }
-}

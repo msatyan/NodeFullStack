@@ -9,7 +9,7 @@ stages {
                 def dockerfile = 'Dockerfile-backend'
 
                 // CUSTOM REGISTRY
-                docker.withRegistry('https://099242274141.dkr.ecr.eu-west-1.amazonaws.com','-f ${dockerfile}') {
+                docker.withRegistry('https://099242274141.dkr.ecr.eu-west-1.amazonaws.com',"-f ${dockerfile}") {
 
                     /* Build the container image */
                     def dockerImage = docker.build("backend:${env.BUILD_ID}")

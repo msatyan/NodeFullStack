@@ -42,7 +42,7 @@ service:
 
 ingress:
   enabled: true
-  className: ""
+  className: "nginx"
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
@@ -50,7 +50,7 @@ ingress:
     - host: fullstack.mesh.projectcircle.co.il
       paths:
         - path: /v1/
-          pathType: ImplementationSpecific
+          pathType: Prefix
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
